@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: justify;
+    margin: 10px 100px;
+}
+
+#paragraph {
+    font-size: 18px;
+    font-weight: normal;
+    width: 600px;
+}
+
+.cake {    
+    background-color: rgb(184, 181, 181);
+    align-self: left;
+    justify-content: left;
+    }
+
+.patty {
+    background-color: white;
+    text-align: right;
+    align-self: flex-end;
+    text-align: justify;
+}
+
+.pie {
+    background-color: rgb(184, 181, 181);
+    align-self: left;
+    justify-content: left;
+}
