@@ -1,0 +1,19 @@
+{
+  "name": "project-package",
+  "version": "1.0.0",
+  "description": "Estudo de gerenciamento de pacotes",
+  "main": "index.js",
+  "repository": "https://github.com/Tessmer/curso-frontend",
+  "author": "Samanta Tessmer",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "date-fns": "^2.19.0",
+    "date.format": "^1.1.2",
+    "format": "^0.2.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
