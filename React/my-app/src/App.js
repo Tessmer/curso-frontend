@@ -23,12 +23,12 @@ function App() {
           {content}
         </a>
 
-        <Button text="Clique aqui" onClick={() => {
+        <Button text="Clique aqui" handleClick={() => {
           setContent("Mudou o texto");
           console.log("Texto do anchor mudou! (:");
         }} />
 
-        <Button text="Clique aqui 2" onClick={() => {
+        <Button text="Clique aqui 2" handleClick={() => {
           setConteudo(true)
         }} />
         {conteudo ? <h1>Título</h1> : ""}
