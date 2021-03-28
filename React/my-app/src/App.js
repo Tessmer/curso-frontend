@@ -1,40 +1,31 @@
-import React, { useState } from "react";
-import Button from "./Button.js"
-import logo from './logo.svg';
-import './App.css';
+// import React from 'react' //COM CLASS
+// VAI P/ HOME: import React from "react";
+// VAI P/ HOME: import Title from "./Title"
+// import { useState } from 'react'; // useState
+// VAI PARA A PÁGINA HOME:
+// import logo from './logo.svg';
+// import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from "react";
+import Home from "./Home";
+import Comments from "./Comments";
+import Comment from "./Comment";
 
+//COM FUNCTION:
 function App() {
-  const [content, setContent] = useState("Valor aqui");
-  //content: valor, setContent: function que define o valor da variável
-  const [conteudo, setConteudo] = useState(false);
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {content}
-        </a>
-
-        <Button text="Clique aqui" handleClick={() => {
-          setContent("Mudou o texto");
-          console.log("Texto do anchor mudou! (:");
-        }} />
-
-        <Button text="Clique aqui 2" handleClick={() => {
-          setConteudo(true)
-        }} />
-        {conteudo ? <h1>Título</h1> : ""}
-      </header>
-    </div>
-  );
+  return <Router>
+    <Switch>
+      <Route path="/comments">
+        <Comments />
+      </Route>
+      <Route path="/comment">
+        <Comment />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
+  </Router>
 }
 
 export default App;
