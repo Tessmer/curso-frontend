@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import Title from "./Title"
-
 import logo from './logo.svg';
 import './App.css';
 

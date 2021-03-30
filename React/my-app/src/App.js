@@ -10,6 +10,9 @@ import React from "react";
 import Home from "./Home";
 import Comments from "./Comments";
 import Comment from "./Comment";
+import CreatePost from "./CreatePost";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 //COM FUNCTION:
 function App() {
@@ -21,10 +24,14 @@ function App() {
       <Route path="/comment">
         <Comment />
       </Route>
+      <Route path="/create-post">
+        <CreatePost />
+      </Route>
       <Route path="/">
         <Home />
       </Route>
     </Switch>
+    <ToastContainer />
   </Router>
 }
 
